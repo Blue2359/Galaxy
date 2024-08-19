@@ -8,8 +8,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 
-		// galaxy.
-		add(new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFF000002));
+		bgColor = 0xFF000002;
 
 		// generate stars.
 		final padding:Int = 40;
