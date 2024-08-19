@@ -27,7 +27,9 @@ class PlayState extends FlxState
 		if (FlxG.keys.justPressed.R)
 			FlxG.resetState();
 
+		#if !html5
 		if (FlxG.keys.justPressed.F11)
 			FlxG.fullscreen = !FlxG.fullscreen;
+		#end
 	}
 }
