@@ -4,6 +4,9 @@ import openfl.filters.ShaderFilter;
 
 class PlayState extends FlxState
 {
+	/** Reset (interval) timer for "re-shuffling". **/
+	var resetTimer:Float = 2.0;
+
 	override public function create()
 	{
 		super.create();
@@ -23,7 +26,9 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		if (FlxG.keys.justPressed.R)
+		resetTimer -= 1.0 * elapsed;
+
+		if (resetTimer <= 0.0 && (FlxG.keys.justPressed.R || FlxG.mouse.justPressed))
 			FlxG.resetState();
 
 		#if !html5

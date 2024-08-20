@@ -5,7 +5,7 @@ import openfl.display.Sprite;
 
 class Main extends Sprite
 {
-	final fps:Int = 30;
+	final fps:Int = 15;
 
 	public function new()
 	{
